@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bíblia de Estudo - Guia Completo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="date-banner" style="background-color: var(--primary-color); color: var(--bg-dark); text-align: center; padding: 0.5rem; font-weight: bold; font-size: 0.9rem;">
+        Oferta válida somente <span id="current-date"></span>
+    </div>
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="hero-tag">Material de Estudo Bíblico</span>
+            <h1>Todos os 66 LIVROS DA BÍBLIA <span class="text-highlight">Detalhados Versículo por Versículo</span></h1>
+            <div class="hero-image-container">
+                <img src="https://i.ibb.co/7m41wrK/Whats-App-Image-2025-12-03-at-19-14-48-removebg-preview.png" alt="Bíblia de Estudo" class="hero-book-img">
+            </div>
+            <p>Entenda a Bíblia inteira de forma clara, prática e reveladora — um guia essencial para dominar cada livro das Escrituras.</p>
+            <div class="hero-price">
+                <span class="new-price">Por APENAS R$10,00</span>
+                <br>
+                <a href="#" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">QUERO ENTENDER A BÍBLIA</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        const dateElement = document.getElementById('current-date');
+        const today = new Date();
+        const formattedDate = today.toLocaleDateString('pt-BR');
+        dateElement.textContent = formattedDate;
+    </script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+:root {
+    --primary-color: #e6c35c;
+    /* Gold/Yellow */
+    --secondary-color: #2ecc71;
+    /* Green */
+    --bg-dark: #312a24;
+    /* Dark Coffee/Brown */
+    --bg-light: #f4f1ea;
+    /* Light Beige */
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --font-main: 'Montserrat', sans-serif;
+    --spacing-unit: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.text-highlight {
+    color: var(--primary-color);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    background-color: #27ae60;
+}
+
+/* Layout Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #4a3f35 0%, #312a24 100%);
+    padding-top: 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-tag {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.hero-image-container {
+    margin: 2rem 0;
+    position: relative;
+}
+
+.hero-book-img {
+    max-width: 300px;
+    width: 100%;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.hero-price {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+.new-price {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+/* Problem Section */
+.problem-section {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.problem-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Pricing Section */
+.pricing-section {
+    background-color: var(--bg-dark);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.pricing-card {
+    background: #3e362e;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid #554b41;
+    transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+    transform: scale(1.02);
+    border-color: var(--primary-color);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--secondary-color);
+    position: relative;
+}
+
+.best-seller-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.card-title {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-price {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    font-weight: 800;
+    margin: 1rem 0;
+}
+
+.card-features {
+    list-style: none;
+    text-align: left;
+    margin: 2rem 0;
+}
+
+.card-features li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.card-features li::before {
+    content: '✓';
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Guarantee Section */
+.guarantee-section {
+    background-color: #383029;
+    text-align: center;
+}
+
+.guarantee-box {
+    border: 2px dashed var(--primary-color);
+    padding: 3rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.guarantee-seal {
+    width: 150px;
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.faq-item {
+    background: white;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    color: #666;
+    display: none;
+    /* Simple toggle logic would be needed via JS or checkbox hack, using open attribute for details/summary is better */
+}
+
+/* Footer */
+.footer {
+    background-color: #111;
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guarantee-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* Audience Section */
+.audience-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #3e362e;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #554b41;
+}
+
+.audience-list {
+    list-style: none;
+}
+
+.audience-list li {
+    margin-bottom: 1.5rem;
+    padding-left: 2.5rem;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.audience-list li::before {
+    content: '?';
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: 800;
+    font-size: 1.3rem;
+    background: rgba(46, 204, 113, 0.1);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
