@@ -15,8 +15,14 @@
 
     <!-- Top Banner -->
     <div id="date-banner"
-        style="background-color: var(--primary-color); color: var(--bg-dark); text-align: center; padding: 0.5rem; font-weight: bold; font-size: 0.9rem;">
-        Oferta válida somente <span id="current-date"></span>
+        style="background-color: var(--primary-color); color: var(--bg-dark); padding: 0.5rem; font-weight: bold; font-size: 0.9rem; overflow: hidden;">
+        <div class="marquee-container">
+            <div class="marquee-text">
+                Acesso promocional por tempo limitado &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Acesso promocional por
+                tempo limitado &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Acesso promocional por tempo limitado
+                &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Acesso promocional por tempo limitado
+            </div>
+        </div>
     </div>
 
     <!-- Hero Section -->
@@ -27,9 +33,9 @@
             <h1>Todos os 66 LIVROS DA BÍBLIA <span class="text-highlight">Detalhados Versículo por Versículo</span></h1>
 
             <div class="hero-image-container">
-                <!-- User Provided Image -->
-                <img src="https://i.ibb.co/7m41wrK/Whats-App-Image-2025-12-03-at-19-14-48-removebg-preview.png"
-                    alt="Bíblia de Estudo" class="hero-book-img">
+                <!-- Updated Hero Image -->
+                <img src="https://i.ibb.co/zgVGwp0/Design-sem-nome-2-1.png" alt="Bíblia de Estudo"
+                    class="hero-book-img">
             </div>
 
             <p>Entenda a Bíblia inteira de forma clara, prática e reveladora — um guia essencial para dominar cada livro
@@ -38,19 +44,11 @@
             <div class="hero-price">
                 <span class="new-price">Por APENAS R$10,00</span>
                 <br>
-                <a href="#" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">QUERO ENTENDER A
-                    BÍBLIA</a>
+                <a href="#pricing" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Quero
+                    destravar minha leitura</a>
             </div>
         </div>
     </section>
-
-    <script>
-        // Dynamic Date Script
-        const dateElement = document.getElementById('current-date');
-        const today = new Date();
-        const formattedDate = today.toLocaleDateString('pt-BR');
-        dateElement.textContent = formattedDate;
-    </script>
 
     <!-- Problem Section -->
     <section class="section problem-section">
@@ -180,8 +178,9 @@
                     <!-- Comment 1 - Maria Fernanda -->
                     <div style="margin-bottom: 16px;">
                         <div style="display: flex; gap: 8px;">
-                            <div
-                                src="https://i.ibb.co/FbhW4jW0/Captura-de-tela-2025-10-01-200723.png" alt="Maria Fernanda" style="width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; object-fit: cover;">
+                            <img src="https://i.ibb.co/FbhW4jW0/Captura-de-tela-2025-10-01-200723.png"
+                                alt="Maria Fernanda"
+                                style="width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; object-fit: cover;">
                             <div style="flex: 1;">
                                 <div
                                     style="background: #f0f2f5; padding: 8px 12px; border-radius: 18px; display: inline-block; max-width: 100%;">
@@ -193,8 +192,10 @@
                                         aprofundar na Palavra!</div>
                                 </div>
                                 <div style="display: flex; gap: 12px; margin-top: 4px; margin-left: 12px;">
-                                    <span style="font-size: 12px; color: #65676b; font-weight: 600;">Curtir</span>
-                                    <span style="font-size: 12px; color: #65676b; font-weight: 600;">Responder</span>
+                                    <span class="reaction-btn" onclick="toggleLike(this)"
+                                        style="font-size: 12px; color: #65676b; font-weight: 600;">Curtir</span>
+                                    <span class="reaction-btn"
+                                        style="font-size: 12px; color: #65676b; font-weight: 600;">Responder</span>
                                     <span style="font-size: 12px; color: #65676b;">2 h</span>
                                     <span style="font-size: 12px; color: #1877f2;">👍 47</span>
                                 </div>
@@ -205,8 +206,8 @@
                     <!-- Comment 2 - João Carlos -->
                     <div style="margin-bottom: 16px;">
                         <div style="display: flex; gap: 8px;">
-                            <div
-                                src="https://i.ibb.co/4nNtQ97J/Captura-de-tela-2025-10-01-201003.png" alt="Jo�o Carlos" style="width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; object-fit: cover;">
+                            <img src="https://i.ibb.co/PGQVTvY1/Captura-de-tela-2025-11-20-152258.png" alt="João Carlos"
+                                style="width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; object-fit: cover;">
                             <div style="flex: 1;">
                                 <div
                                     style="background: #f0f2f5; padding: 8px 12px; border-radius: 18px; display: inline-block; max-width: 100%;">
@@ -217,8 +218,10 @@
                                         estudos. Os bônus são excelentes, principalmente os de Salmos!</div>
                                 </div>
                                 <div style="display: flex; gap: 12px; margin-top: 4px; margin-left: 12px;">
-                                    <span style="font-size: 12px; color: #65676b; font-weight: 600;">Curtir</span>
-                                    <span style="font-size: 12px; color: #65676b; font-weight: 600;">Responder</span>
+                                    <span class="reaction-btn" onclick="toggleLike(this)"
+                                        style="font-size: 12px; color: #65676b; font-weight: 600;">Curtir</span>
+                                    <span class="reaction-btn"
+                                        style="font-size: 12px; color: #65676b; font-weight: 600;">Responder</span>
                                     <span style="font-size: 12px; color: #65676b;">5 h</span>
                                     <span style="font-size: 12px; color: #1877f2;">👍❤️ 82</span>
                                 </div>
@@ -229,8 +232,9 @@
                     <!-- Comment 3 - Ana Paula Santos -->
                     <div style="margin-bottom: 16px;">
                         <div style="display: flex; gap: 8px;">
-                            <div
-                                src="https://i.ibb.co/C5MnzXWY/Captura-de-tela-2025-10-01-201033.png" alt="Ana Paula Santos" style="width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; object-fit: cover;">
+                            <img src="https://i.ibb.co/C5MnzXWY/Captura-de-tela-2025-10-01-201033.png"
+                                alt="Ana Paula Santos"
+                                style="width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; object-fit: cover;">
                             <div style="flex: 1;">
                                 <div
                                     style="background: #f0f2f5; padding: 8px 12px; border-radius: 18px; display: inline-block; max-width: 100%;">
@@ -241,8 +245,10 @@
                                         espiritualmente. Vale cada centavo! Indiquei pra toda minha família.</div>
                                 </div>
                                 <div style="display: flex; gap: 12px; margin-top: 4px; margin-left: 12px;">
-                                    <span style="font-size: 12px; color: #65676b; font-weight: 600;">Curtir</span>
-                                    <span style="font-size: 12px; color: #65676b; font-weight: 600;">Responder</span>
+                                    <span class="reaction-btn" onclick="toggleLike(this)"
+                                        style="font-size: 12px; color: #65676b; font-weight: 600;">Curtir</span>
+                                    <span class="reaction-btn"
+                                        style="font-size: 12px; color: #65676b; font-weight: 600;">Responder</span>
                                     <span style="font-size: 12px; color: #65676b;">1 d</span>
                                     <span style="font-size: 12px; color: #1877f2;">👍 36</span>
                                 </div>
@@ -253,8 +259,9 @@
                     <!-- Comment 4 - Patrícia Oliveira -->
                     <div style="margin-bottom: 16px;">
                         <div style="display: flex; gap: 8px;">
-                            <div
-                                src="https://i.ibb.co/bRH6xLjF/Captura-de-tela-2025-10-01-201147.png" alt="Patr�cia Oliveira" style="width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; object-fit: cover;">
+                            <img src="https://i.ibb.co/bRH6xLjF/Captura-de-tela-2025-10-01-201147.png"
+                                alt="Patrícia Oliveira"
+                                style="width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; object-fit: cover;">
                             <div style="flex: 1;">
                                 <div
                                     style="background: #f0f2f5; padding: 8px 12px; border-radius: 18px; display: inline-block; max-width: 100%;">
@@ -265,8 +272,10 @@
                                         Já estou no livro de Provérbios e cada dia aprendo mais.</div>
                                 </div>
                                 <div style="display: flex; gap: 12px; margin-top: 4px; margin-left: 12px;">
-                                    <span style="font-size: 12px; color: #65676b; font-weight: 600;">Curtir</span>
-                                    <span style="font-size: 12px; color: #65676b; font-weight: 600;">Responder</span>
+                                    <span class="reaction-btn" onclick="toggleLike(this)"
+                                        style="font-size: 12px; color: #65676b; font-weight: 600;">Curtir</span>
+                                    <span class="reaction-btn"
+                                        style="font-size: 12px; color: #65676b; font-weight: 600;">Responder</span>
                                     <span style="font-size: 12px; color: #65676b;">3 d</span>
                                     <span style="font-size: 12px; color: #1877f2;">👍❤️ 54</span>
                                 </div>
@@ -277,8 +286,9 @@
                     <!-- Comment 5 - Roberto Silva -->
                     <div style="margin-bottom: 16px;">
                         <div style="display: flex; gap: 8px;">
-                            <div
-                                src="https://i.ibb.co/JFz9XQMY/Captura-de-tela-2025-11-20-152142.png" alt="Roberto Silva" style="width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; object-fit: cover;">
+                            <img src="https://i.ibb.co/JFz9XQMY/Captura-de-tela-2025-11-20-152142.png"
+                                alt="Roberto Silva"
+                                style="width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; object-fit: cover;">
                             <div style="flex: 1;">
                                 <div
                                     style="background: #f0f2f5; padding: 8px 12px; border-radius: 18px; display: inline-block; max-width: 100%;">
@@ -289,8 +299,10 @@
                                         minha vida espiritual. Super recomendo!</div>
                                 </div>
                                 <div style="display: flex; gap: 12px; margin-top: 4px; margin-left: 12px;">
-                                    <span style="font-size: 12px; color: #65676b; font-weight: 600;">Curtir</span>
-                                    <span style="font-size: 12px; color: #65676b; font-weight: 600;">Responder</span>
+                                    <span class="reaction-btn" onclick="toggleLike(this)"
+                                        style="font-size: 12px; color: #65676b; font-weight: 600;">Curtir</span>
+                                    <span class="reaction-btn"
+                                        style="font-size: 12px; color: #65676b; font-weight: 600;">Responder</span>
                                     <span style="font-size: 12px; color: #65676b;">4 d</span>
                                     <span style="font-size: 12px; color: #1877f2;">👍❤️ 91</span>
                                 </div>
@@ -301,8 +313,9 @@
                     <!-- Comment 6 - Carla Mendes -->
                     <div style="margin-bottom: 16px;">
                         <div style="display: flex; gap: 8px;">
-                            <div
-                                src="https://i.ibb.co/PGQVTvY1/Captura-de-tela-2025-11-20-152258.png" alt="Carla Mendes" style="width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; object-fit: cover;">
+                            <img src="https://i.ibb.co/4nNtQ97J/Captura-de-tela-2025-10-01-201003.png"
+                                alt="Carla Mendes"
+                                style="width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; object-fit: cover;">
                             <div style="flex: 1;">
                                 <div
                                     style="background: #f0f2f5; padding: 8px 12px; border-radius: 18px; display: inline-block; max-width: 100%;">
@@ -313,8 +326,10 @@
                                         e jovens estão amando as explicações.</div>
                                 </div>
                                 <div style="display: flex; gap: 12px; margin-top: 4px; margin-left: 12px;">
-                                    <span style="font-size: 12px; color: #65676b; font-weight: 600;">Curtir</span>
-                                    <span style="font-size: 12px; color: #65676b; font-weight: 600;">Responder</span>
+                                    <span class="reaction-btn" onclick="toggleLike(this)"
+                                        style="font-size: 12px; color: #65676b; font-weight: 600;">Curtir</span>
+                                    <span class="reaction-btn"
+                                        style="font-size: 12px; color: #65676b; font-weight: 600;">Responder</span>
                                     <span style="font-size: 12px; color: #65676b;">1 sem</span>
                                     <span style="font-size: 12px; color: #1877f2;">👍 68</span>
                                 </div>
@@ -326,15 +341,15 @@
                 <!-- Post Footer -->
                 <div
                     style="padding: 4px 16px 12px; border-top: 1px solid #e4e6eb; display: flex; justify-content: space-around;">
-                    <div
+                    <div class="reaction-btn" onclick="toggleLike(this)"
                         style="flex: 1; padding: 8px; color: #65676b; font-weight: 600; font-size: 15px; text-align: center;">
                         👍 Curtir
                     </div>
-                    <div
+                    <div class="reaction-btn"
                         style="flex: 1; padding: 8px; color: #65676b; font-weight: 600; font-size: 15px; text-align: center;">
                         💬 Comentar
                     </div>
-                    <div
+                    <div class="reaction-btn"
                         style="flex: 1; padding: 8px; color: #65676b; font-weight: 600; font-size: 15px; text-align: center;">
                         ↗️ Compartilhar
                     </div>
@@ -344,7 +359,7 @@
     </section>
 
     <!-- Pricing Section -->
-    <section class="section pricing-section">
+    <section id="pricing" class="section pricing-section">
         <div class="container">
             <h2 class="text-center">ESCOLHA A MELHOR OPÇÃO PARA VOCÊ:</h2>
 
@@ -352,13 +367,14 @@
                 <!-- Basic Plan -->
                 <div class="pricing-card">
                     <h3 class="card-title">PLANO BÁSICO</h3>
-                    <img src="C:/Users/Caio/.gemini/antigravity/brain/29e1f86e-3df9-486b-be69-6b4188dda064/bible_study_book_cover_1764805702082.png"
-                        alt="Livro Básico" style="max-width: 150px; margin: 1rem 0;">
+                    <!-- Updated Image -->
+                    <img src="https://i.ibb.co/5hnq8xYY/Gemini-Generated-Image-89kpes89kpes89kp-1.png"
+                        alt="Livro Básico" style="max-width: 180px; margin: 1rem 0; border-radius: 5px;">
 
                     <ul class="card-features">
                         <li>Todos os 66 Livros Explicados</li>
                         <li>Linguagem Simples</li>
-                        <li>Formato Digital (PDF)</li>
+                        <li>Formato Digital </li>
                     </ul>
 
                     <div class="card-price">
@@ -366,7 +382,7 @@
                         R$ 10,00
                     </div>
 
-                    <a href="#" class="btn btn-primary">QUERO SOMENTE O BÁSICO</a>
+                    <a href="#" onclick="showUpsell(event)" class="btn btn-primary">QUERO SOMENTE O BÁSICO</a>
                 </div>
 
                 <!-- Complete Plan -->
@@ -375,18 +391,28 @@
                     <h3 class="card-title" style="color: var(--secondary-color);">PLANO COMPLETO</h3>
                     <p style="font-size: 0.9rem; color: #ccc;">+1243 pessoas escolheram esse plano</p>
 
-                    <img src="C:/Users/Caio/.gemini/antigravity/brain/29e1f86e-3df9-486b-be69-6b4188dda064/bible_study_book_cover_1764805702082.png"
-                        alt="Pacote Completo" style="max-width: 200px; margin: 1rem 0;">
+                    <!-- Updated Image -->
+                    <img src="https://i.ibb.co/zgVGwp0/Design-sem-nome-2-1.png" alt="Pacote Completo"
+                        style="max-width: 250px; margin: 1rem 0; border-radius: 5px;">
 
                     <ul class="card-features">
                         <li><strong>Todos os 66 Livros Explicados</strong></li>
-                        <li>Suporte Prioritário no WhatsApp</li>
+
                         <li>Atualizações Mensais</li>
+                        <li>Formato Digital</li>
                         <li style="color: var(--primary-color);">Bônus: Devocional 40 Dias</li>
                         <li style="color: var(--primary-color);">Bônus: 1000 Esboços de Pregação</li>
                         <li style="color: var(--primary-color);">Bônus: 150 Salmos Explicados</li>
-                        <li style="color: var(--primary-color);">Bônus: Coleção Ouro</li>
+                        <li style="color: var(--primary-color);">Bônus: Coleção Our - 200 Versiculos Mais Reveladores
+                        </li>
                         <li style="color: var(--primary-color);">Bônus: 31 Provérbios Explicados</li>
+                        <li style="color: var(--primary-color);">Bônus: Coleção Ouro - 200 Versiculos Mais Reveladores
+                        </li>
+                        <li style="color: var(--primary-color);">Bônus: 100 Versiculos do Antigo Testamento Explicados
+                        </li>
+                        <li style="color: var(--primary-color);">Bônus: Evangelho de Mateus Explicado</li>
+                        <li style="color: var(--primary-color);">Bônus: Os 7 Selos do Apocalipse</li>
+                        <li style="color: var(--primary-color);">Bônus: Biblia de Estudo - Mais de 3 Mil Paginas</li>
                     </ul>
 
                     <div class="card-price">
@@ -394,11 +420,15 @@
                             por:</span><br>
                         R$ 27,00
                     </div>
-                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">Ou 3x de R$ 10,32</p>
+                    <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">Ou 3x de R$ 10,32</p>
+                    <p style="color: #2ecc71; font-weight: bold; margin-bottom: 1.5rem;">Você economiza R$ 170,00</p>
 
-                    <a href="#" class="btn btn-primary"
+                    <a href="https://www.ggcheckout.com/checkout/v2/RKM08MqBQZ34e2acGwra" class="btn btn-primary"
                         style="width: 100%; background-color: var(--primary-color); color: black;">QUERO O PLANO
-                        COMPLETO ></a>
+                        COMPLETO</a>
+
+                    <p style="font-size: 0.8rem; color: #ff6b6b; font-weight: bold; margin-top: 1rem;">APROVEITE AGORA:
+                        Você não vai encontrar esse preço depois!</p>
                 </div>
             </div>
         </div>
@@ -408,8 +438,8 @@
     <section class="section guarantee-section">
         <div class="container">
             <div class="guarantee-box">
-                <img src="C:/Users/Caio/.gemini/antigravity/brain/29e1f86e-3df9-486b-be69-6b4188dda064/guarantee_seal_1764805731976.png"
-                    alt="Selo de Garantia" class="guarantee-seal">
+                <img src="https://i.ibb.co/k29HJqS9/Selo-garantia-7dias-curso-1024x1024.png" alt="Selo de Garantia"
+                    class="guarantee-seal">
                 <div style="text-align: left;">
                     <h3 style="color: var(--primary-color); font-size: 2rem;">GARANTIA INCONDICIONAL DE 7 DIAS</h3>
                     <p>Sua compra está 100% protegida. Se por qualquer motivo o conteúdo não cumprir com o prometido,
@@ -448,7 +478,7 @@
         <div class="container">
             <h2 style="color: white;">Não perca esta oportunidade!</h2>
             <p style="margin-bottom: 2rem;">Comece hoje mesmo sua jornada de conhecimento bíblico profundo.</p>
-            <a href="#" class="btn btn-primary">QUERO ADQUIRIR AGORA</a>
+            <a href="#pricing" class="btn btn-primary">QUERO ADQUIRIR AGORA</a>
         </div>
     </section>
 
@@ -458,6 +488,128 @@
             <p style="font-size: 0.8rem; margin-top: 1rem;">Políticas de Privacidade | Termos de Uso</p>
         </div>
     </footer>
+
+    <!-- Upsell Modal -->
+    <div id="upsellModal" class="upsell-modal">
+        <div class="upsell-content">
+            <h2>Espera — quer liberar o Pacote Completo com 10 bônus?</h2>
+            <p style="color: #fff; font-size: 1.1rem; margin: 1rem 0;">
+                Hoje eu tô liberando um desconto de validação:
+            </p>
+            <p class="highlight-text">
+                <span class="price-strike">De R$27</span> por <strong>R$17</strong> (somente agora).
+            </p>
+
+            <ul class="upsell-benefits">
+                <li>✅ Você leva o Essencial + 10 bônus</li>
+                <li>✅ Melhor custo-benefício (diferença pequena, entrega muito maior)</li>
+            </ul>
+
+            <a href="https://www.ggcheckout.com/checkout/v2/IjI1TaCfE94Dg6vjcg0V" class="upsell-btn-primary">
+                SIM, QUERO O COMPLETO POR R$17
+            </a>
+
+            <button onclick="closeUpsell()" class="upsell-btn-secondary">
+                Continuar com o Essencial por R$10
+            </button>
+
+            <p class="upsell-footer">
+                Sem pressão — você escolhe o que faz sentido pra você.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Upsell Modal Functions
+        function showUpsell(event) {
+            event.preventDefault();
+            document.getElementById('upsellModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeUpsell() {
+            document.getElementById('upsellModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+            window.location.href = 'https://www.ggcheckout.com/checkout/v2/MJBjBouqDlm54NJ0cveH';
+        }
+
+        // Close modal on outside click
+        document.getElementById('upsellModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeUpsell();
+            }
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Like
+            window.toggleLike = function (element) {
+                element.classList.toggle('liked');
+                if (element.innerText.includes('👍')) {
+                    const count = parseInt(element.innerText.replace('👍', '').trim(), 10) || 0;
+                    element.innerText = '👍 ' + (element.classList.contains('liked') ? count + 1 : Math.max(0, count - 1));
+                }
+            };
+
+            // Carousel
+            const track = document.querySelector('.track');           // ajuste
+            const slides = document.querySelectorAll('.slide');       // ajuste
+            const dotsContainer = document.querySelector('.dots');    // ajuste
+
+            if (!track || !slides.length || !dotsContainer) return;
+
+            // Create dots
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.className = 'dot' + (index === 0 ? ' active' : '');
+                dot.addEventListener('click', () => {
+                    track.scrollTo({ left: slides[index].offsetLeft, behavior: 'smooth' });
+                });
+                dotsContainer.appendChild(dot);
+            });
+
+            // Update dots on scroll
+            track.addEventListener('scroll', () => {
+                const scrollPos = track.scrollLeft + (track.clientWidth / 2);
+                slides.forEach((slide, index) => {
+                    const left = slide.offsetLeft;
+                    const right = left + slide.clientWidth;
+                    if (scrollPos >= left && scrollPos <= right) {
+                        dotsContainer.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                        dotsContainer.children[index]?.classList.add('active');
+                    }
+                });
+            });
+
+            // Auto scroll
+            setInterval(() => {
+                if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 10) {
+                    track.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    track.scrollBy({ left: 260, behavior: 'smooth' });
+                }
+            }, 3000);
+        });
+    </script>
+
 
 </body>
 
