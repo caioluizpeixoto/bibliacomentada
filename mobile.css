@@ -1,0 +1,70 @@
+/* Mobile Optimizations for Upsell Modal */
+@media (max-width: 480px) {
+    .upsell-modal {
+        padding: 0.5rem;
+    }
+
+    .upsell-content {
+        padding: 1.2rem 0.8rem;
+        width: 95%;
+        max-width: 100%;
+    }
+
+    .upsell-content h2 {
+        font-size: 1rem !important;
+        margin-bottom: 0.6rem;
+        line-height: 1.2;
+    }
+
+    .upsell-content p {
+        font-size: 0.85rem;
+        margin: 0.5rem 0;
+    }
+
+    .upsell-content .highlight-text {
+        font-size: 0.95rem !important;
+        margin: 0.6rem 0;
+    }
+
+    .upsell-benefits {
+        margin: 0.8rem 0;
+        padding: 0 0.3rem;
+    }
+
+    .upsell-benefits li {
+        font-size: 0.75rem !important;
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
+    }
+
+    .upsell-btn-primary {
+        padding: 0.8rem 0.5rem !important;
+        font-size: 0.7rem !important;
+        margin: 0.6rem 0 0.4rem 0;
+        line-height: 1.2;
+        word-wrap: break-word;
+    }
+
+    .upsell-btn-secondary {
+        padding: 0.6rem 0.3rem !important;
+        font-size: 0.7rem !important;
+        line-height: 1.2;
+    }
+
+    .upsell-footer {
+        font-size: 0.65rem !important;
+        margin-top: 0.6rem;
+    }
+
+    .pricing-card {
+        padding: 1.5rem 1rem !important;
+    }
+
+    .card-title {
+        font-size: 1.1rem !important;
+    }
+
+    .card-price {
+        font-size: 1.8rem !important;
+    }
+}
